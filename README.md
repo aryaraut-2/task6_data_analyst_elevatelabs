@@ -22,17 +22,7 @@ The table `orders` contains the following columns:
 
 ---
 
-## 🛠️ SQL Script
 
-```sql
-SELECT
-    YEAR(order_date) AS year,
-    MONTH(order_date) AS month,
-    SUM(amount) AS total_revenue,
-    COUNT(DISTINCT order_id) AS order_volume
-FROM
-    online_sales.orders
-GROUP BY
     YEAR(order_date),
     MONTH(order_date)
 ORDER BY
